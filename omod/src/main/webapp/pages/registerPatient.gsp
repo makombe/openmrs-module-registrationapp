@@ -218,7 +218,20 @@ ${ ui.includeFragment("uicommons", "validationMessages")}
                                         classes: [(name == "givenName" || name == "familyName") ? "required" : ""]
                                 ])}
 
+
                                 <% } %>
+                                ${ ui.includeFragment("registrationapp", "field/text", [
+                                        label: 'Alias(Nickname)',
+                                        id: "aliasLabel",
+                                        size: 25,
+                                        formFieldName: 'alias',
+                                        dataItems: 1,
+                                        left: true,
+                                        initialValue: '',
+                                        type:'personAttribute',
+                                        uuid:'aec1b592-1d8a-11e9-ab14-d663bd873d93',
+                                        classes: [ "required"]
+                                ])}
                             </div>
 
                             <% if (allowUnknownPatients) { %>
